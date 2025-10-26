@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" href="/public/assets/favicon-32x32.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Github user finder</title>
+</head>
+
+<body>
+  <div id="app">
+    <div class="container-wrapper">
+      <main class="container">
+
+        <!-- header starts here -->
+        <header class="header">
+          <h1 class="title">devfinder</h1>
+          <div class="btn-mode" id="themeChangeBtn">
+            <p id="themeName">DARK</p>
+            <img id="themeIcon" src="/assets/icon-moon.svg" alt="Moon Image">
+          </div>
+        </header>
+        <!-- header ends here -->
+
+        <!-- user not fount message -->
+        <p class="user-not-found" id="userNotFound">User not found</p>
+
+        <!-- search bar starts here -->
+        <form class="search-bar">
+          <div class="search-icon">
+            <img src="/assets/icon-search.svg" alt="Search Icon">
+          </div>
+          <input type="search" name="username" placeholder="Search GitHub Username..." maxlength="39"
+            class="search-area" id="searchArea">
+          <button type="submit" class="search-btn" id="searchBtn">Search</button>
+        </form>
+        <!-- search bar ends here -->
+
+        <!-- user information container starts here -->
+        <div class="user-information-container">
+
+          <!-- user profile img -->
+          <div class="user-profile-img-container">
+            <img src="/assets/octocat.png" alt="Octocat Image" class="profile-img" id="profileImg">
+          </div>
+
+          <div class="profile-information">
+
+            <!-- user name and join date container starts here -->
+            <div class="user-basic-detail">
+              <div class="mobile-user-img">
+                <img src="/assets/octocat.png" alt="Octocat Image" class="profile-img" id="profileImgMobile">
+              </div>
+              <div class="user-name-container">
+                <div>
+                  <p class="user-name" id="userName">The Octocat</p>
+                  <a href="https://github.com/octocat" target="_blank" class="user-id" id="userId">@octocat</a>
+                </div>
+                <div class="joined-date-continer">
+                  <p>Joined</p>
+                  <p id="joinDate">25</p>
+                  <p id="joinMonth">Jan</p>
+                  <p id="joinYear">2011</p>
+                </div>
+              </div>
+            </div>
+            <!-- user name and join date container ends here -->
+
+            <!-- user bio -->
+            <p class="user-bio" id="userBio">This profile has no bio</p>
+
+            <!-- user work information container starts here -->
+            <div class="user-work-information">
+              <div class="repo-container">
+                <p>Repos</p>
+                <p class="repos" id="userRepo">8</p>
+              </div>
+              <div class="followers-container">
+                <p>Followers</p>
+                <p class="followers" id="userFollowers">3938</p>
+              </div>
+              <div class="following-container">
+                <p>Following</p>
+                <p class="following" id="userFollowing">9</p>
+              </div>
+            </div>
+            <!-- user work information container ends here -->
+
+            <!-- user links container starts here -->
+            <div class="user-links">
+              <div>
+                <div class="user-location">
+                  <img src="/assets/icon-location.svg" alt="Location Logo">
+                  <p id="userLocation">San Francisco</p>
+                </div>
+                <div class="user-website-link">
+                  <img src="/assets/icon-website.svg" alt="Website Logo">
+                  <p><a href="https://github.blog" target="_blank" id="userWebsite">github.blog</a></p>
+                </div>
+              </div>
+              <div>
+                <div class="user-twitter-link">
+                  <img src="/assets/icon-twitter.svg" alt="Twitter Logo" id="twitterIcon">
+                  <a href="#" target="_blank" id="userTwitterName">Not available</a>
+                </div>
+                <div class="user-company">
+                  <img src="/assets/icon-company.svg" alt="Company Logo">
+                  <p id="userCompany">@github</p>
+                </div>
+              </div>
+            </div>
+            <!-- user links container ends here -->
+
+          </div>
+        </div>
+        <!-- user information container ends here -->
+
+      </main>
+    </div>
+  </div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
